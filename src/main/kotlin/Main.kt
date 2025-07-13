@@ -1,24 +1,24 @@
+import `object`.ObjectMain
+
 fun main(args: Array<String>) {
+    println(
+        """
+            ===== Kotlin InterviewKit =====
+            
+            Choose a topic to run:
+            1. Object Example
+                        
+        """.trimIndent()
+    )
+    println("Enter your choice: ")
+    when (readln()) {
+        "1" -> {
+            println("--- Running Object Example ---")
+            ObjectMain.run()
+        }
 
-    //region Singleton Object Usage
-    ObjectEx.description()
+        else -> println("Invalid choice. Please try again.")
+    }
 
-    testSingletonUsingHashcode()
-    testSingletonUsingInstantiationCounter()
-    //endregion
 }
 
-fun testSingletonUsingHashcode() {
-    val obj1 = ObjectEx
-    val obj2 = ObjectEx
-
-    println("obj1 hashcode = ${obj1.hashCode()}")
-    println("obj2 hashcode = ${obj2.hashCode()}")
-    println("obj1 & obj2 are same = ${obj1 === obj2}") //Reference equality
-
-}
-
-fun testSingletonUsingInstantiationCounter(){
-    val obj = ObjectEx
-    println("ObjectEx instantiated ${obj.instanceCount} time(s)")
-}

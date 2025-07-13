@@ -1,16 +1,10 @@
+package `object`
+
 object ObjectEx {
     var instanceCount = 0
 
     init {
-        println(
-            """
-            -----------------------------------------
-            
-            ObjectEx class is initialised.
-            
-            -----------------------------------------
-        """.trimIndent()
-        )
+        println("ObjectEx class is initialised.")
         instanceCount++
     }
 
